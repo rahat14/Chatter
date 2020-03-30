@@ -1,0 +1,44 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout
+    android:layout_marginBottom="@dimen/_5sdp"
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:padding="8dp"
+    >
+
+    <TextView
+        android:id="@+id/msgTv"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:autoLink="all"
+        android:background="@drawable/rounded_rectangle_chat_bubble"
+        android:clickable="true"
+        android:focusable="true"
+        android:linksClickable="true"
+        android:maxWidth="@dimen/_180sdp"
+        android:padding="@dimen/_8sdp"
+        android:text="Hello ,Hello Nigga "
+        android:textColor="@color/white"
+        android:textSize="16sp"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="11:40 pm"
+        android:textSize="12sp"
+        android:id="@+id/dateview"
+        android:layout_marginEnd="@dimen/_3sdp"
+        app:layout_constraintBottom_toBottomOf="@+id/msgTv"
+        app:layout_constraintLeft_toRightOf="@+id/msgTv"
+
+        />
+
+
+
+
+</androidx.constraintlayout.widget.ConstraintLayout>
