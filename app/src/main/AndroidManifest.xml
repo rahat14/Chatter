@@ -2,7 +2,7 @@
 <manifest xmlns:android="http://schemas.android.com/apk/res/android"
     package="com.syntexerror.chatter">
 
-    <uses-permission android:name="android.permission.INTERNET"/>
+    <uses-permission android:name="android.permission.INTERNET" />
 
     <application
         android:allowBackup="true"
@@ -10,8 +10,21 @@
         android:label="@string/app_name"
         android:roundIcon="@mipmap/ic_launcher_round"
         android:supportsRtl="true"
-        android:theme="@style/AppTheme">
+        android:theme="@style/AppTheme"
+        android:name=".Chatter">
+        <activity android:name=".activty.myFriendList">
+
+        </activity>
+        <activity android:name=".activty.AllUserList">
+
+        </activity>
         <activity android:name=".chatOperation.chatPage">
+
+        </activity>
+        <activity android:name=".login_controller.register_page" >
+
+        </activity>
+        <activity android:name=".login_controller.log_in_page" >
 
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
@@ -20,11 +33,9 @@
             </intent-filter>
 
         </activity>
-        <activity android:name=".login_controller.register_page" />
-        <activity android:name=".login_controller.log_in_page" />
         <activity android:name=".BaseActivity">
 
-        </activity>
+    </activity>
     </application>
 
 </manifest>

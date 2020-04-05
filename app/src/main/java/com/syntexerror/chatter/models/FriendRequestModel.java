@@ -1,32 +1,33 @@
 package com.syntexerror.chatter.models;
 
 public class FriendRequestModel {
-    String username , uid , timestamp  , userProfileLink ;
+    String  requsetedFriendUsername, requsetedFriendUid, timestamp,  requsetedFriendProfileLink, postId;
 
     public FriendRequestModel() {
     }
 
-    public FriendRequestModel(String username, String uid, String timestamp, String userProfileLink) {
-        this.username = username;
-        this.uid = uid;
+    public FriendRequestModel(String requsetedFriendUsername, String requsetedFriendUid, String timestamp, String requsetedFriendProfileLink, String postId) {
+        this.requsetedFriendUsername = requsetedFriendUsername;
+        this.requsetedFriendUid = requsetedFriendUid;
         this.timestamp = timestamp;
-        this.userProfileLink = userProfileLink;
+        this.requsetedFriendProfileLink = requsetedFriendProfileLink;
+        this.postId = postId;
     }
 
-    public String getUsername() {
-        return username;
+    public String getRequsetedFriendUsername() {
+        return requsetedFriendUsername;
     }
 
-    public void setUsername(String username) {
-        this.username = username;
+    public void setRequsetedFriendUsername(String requsetedFriendUsername) {
+        this.requsetedFriendUsername = requsetedFriendUsername;
     }
 
-    public String getUid() {
-        return uid;
+    public String getRequsetedFriendUid() {
+        return requsetedFriendUid;
     }
 
-    public void setUid(String uid) {
-        this.uid = uid;
+    public void setRequsetedFriendUid(String requsetedFriendUid) {
+        this.requsetedFriendUid = requsetedFriendUid;
     }
 
     public String getTimestamp() {
@@ -37,11 +38,19 @@ public class FriendRequestModel {
         this.timestamp = timestamp;
     }
 
-    public String getUserProfileLink() {
-        return userProfileLink;
+    public String getRequsetedFriendProfileLink() {
+        return requsetedFriendProfileLink;
     }
 
-    public void setUserProfileLink(String userProfileLink) {
-        this.userProfileLink = userProfileLink;
+    public void setRequsetedFriendProfileLink(String requsetedFriendProfileLink) {
+        this.requsetedFriendProfileLink = requsetedFriendProfileLink;
+    }
+
+    public String getPostId() {
+        return postId;
+    }
+
+    public void setPostId(String postId) {
+        this.postId = postId;
     }
 }

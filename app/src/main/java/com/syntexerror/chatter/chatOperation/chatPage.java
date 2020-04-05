@@ -127,7 +127,7 @@ public class chatPage extends AppCompatActivity {
 
         String key = mref.push().getKey() ;
        // String username  , name , uid , profileLink , joinTimeStamp , isOnline   ;
-        UserModel model = new UserModel("test" , "test user" , key,"https://picsum.photos/200/300"   , System.currentTimeMillis()/1000+"" , "false") ;
+        UserModel model = new UserModel("test" , "test user" , key,"https://picsum.photos/200/300"   , System.currentTimeMillis()/1000 , "false") ;
 
         mreff.child(key).setValue(model) ;
 

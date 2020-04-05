@@ -2,7 +2,8 @@
 <LinearLayout
     xmlns:android="http://schemas.android.com/apk/res/android"
     android:layout_width="match_parent"
-    android:layout_marginTop="@dimen/_5sdp"
+    android:id="@+id/container"
+    android:layout_marginTop="@dimen/_10sdp"
     android:layout_height="@dimen/_100sdp">
 
     <RelativeLayout
@@ -25,7 +26,7 @@
             android:layout_alignParentTop="true"
             android:layout_height="wrap_content"
             android:layout_marginStart="@dimen/_5sdp"
-            android:text="User X "
+            android:text="Some One"
             android:textColor="#000000"
             android:textStyle="bold"
             android:layout_toEndOf="@+id/pponFriendreq"
@@ -35,46 +36,10 @@
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:layout_toEndOf="@+id/pponFriendreq"
-            android:text="Sent You a Freind Request !!"
+            android:text="Click to Send a  Freind Request !!"
             android:layout_marginStart="@dimen/_5sdp"
             android:textSize="17sp"
-            android:foreground="?attr/selectableItemBackground"
             android:layout_below="@+id/nameOnFriendReq"/>
-
-
-        <Button
-            android:id="@+id/acptBtn"
-            android:foreground="?attr/selectableItemBackground"
-            android:textColor="@color/green"
-            android:background="@drawable/button_green_border"
-            android:layout_toEndOf="@+id/pponFriendreq"
-            android:textSize="15sp"
-            android:gravity="center"
-
-            android:textStyle="normal"
-            android:layout_width="@dimen/_90sdp"
-            android:layout_alignParentBottom="true"
-            android:layout_marginStart="@dimen/_5sdp"
-            android:layout_marginBottom="@dimen/_4sdp"
-            android:layout_height="@dimen/_25sdp"
-            android:text="Accept"/>
-
-
-        <Button
-            android:id="@+id/declineBtn"
-            android:textColor="@color/red"
-            android:textSize="15sp"
-             android:background="@drawable/button_red_border"
-            android:gravity="center"
-            android:textStyle="normal"
-            android:layout_width="@dimen/_90sdp"
-            android:layout_alignParentBottom="true"
-            android:layout_alignParentEnd="true"
-            android:layout_height="@dimen/_25sdp"
-            android:layout_marginBottom="@dimen/_4sdp"
-            android:layout_marginEnd="@dimen/_8sdp"
-            android:text="Decline"/>
-
 
 
     </RelativeLayout>

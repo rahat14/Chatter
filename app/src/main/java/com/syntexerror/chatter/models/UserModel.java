@@ -1,12 +1,13 @@
 package com.syntexerror.chatter.models;
 
 public class UserModel {
-    String username  , name , uid , profileLink , joinTimeStamp , isOnline   ;
+    String username  , name , uid , profileLink , isOnline   ;
+    Long joinTimeStamp ;
 
     public UserModel() {
     }
 
-    public UserModel(String username, String name, String uid, String profileLink, String joinTimeStamp, String isOnline) {
+    public UserModel(String username, String name, String uid, String profileLink, Long joinTimeStamp, String isOnline) {
         this.username = username;
         this.name = name;
         this.uid = uid;
@@ -47,11 +48,11 @@ public class UserModel {
         this.profileLink = profileLink;
     }
 
-    public String getJoinTimeStamp() {
+    public Long getJoinTimeStamp() {
         return joinTimeStamp;
     }
 
-    public void setJoinTimeStamp(String joinTimeStamp) {
+    public void setJoinTimeStamp(Long joinTimeStamp) {
         this.joinTimeStamp = joinTimeStamp;
     }
 

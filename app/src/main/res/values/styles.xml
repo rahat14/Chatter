@@ -6,6 +6,22 @@
         <item name="colorPrimary">@color/colorPrimary</item>
         <item name="colorPrimaryDark">@color/colorPrimaryDark</item>
         <item name="colorAccent">@color/colorAccent</item>
+        <item name="colorControlNormal">#c5c5c5</item>
+        <item name="colorControlActivated">@color/colorPrimaryDark</item>
+        <item name="colorControlHighlight">@color/colorPrimary</item>
+    </style>
+
+    <style name="AppTheme.AppBarOverlay" parent="ThemeOverlay.AppCompat.Dark.ActionBar" />
+
+    <style name="AppTheme.PopupOverlay" parent="ThemeOverlay.AppCompat.Light" />
+
+    <style name="tab_text" parent="@android:style/TextAppearance.Widget.TabWidget">
+        <item name="android:textAllCaps">false</item>
+        <item name="android:textSize">16sp</item>
+        <item name="android:textColor">@color/greyish</item>
+
+
+
     </style>
 
 </resources>

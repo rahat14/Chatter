@@ -1,0 +1,248 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+<androidx.constraintlayout.widget.ConstraintLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:background="#ffffff"
+    android:layout_height="wrap_content">
+
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+
+        android:background="#ffffff"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintTop_toTopOf="parent">
+
+        <RelativeLayout
+            android:id="@+id/uppperContainer"
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/_180sdp"
+            android:orientation="horizontal">
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_centerVertical="true"
+                android:layout_marginStart="@dimen/_18sdp"
+                android:text="@string/app_name"
+                android:textSize="25sp" />
+
+            <ImageView
+                android:layout_width="@dimen/_220sdp"
+                android:layout_height="@dimen/_180sdp"
+                android:layout_alignParentEnd="true"
+                android:background="@drawable/back" />
+
+
+        </RelativeLayout>
+
+        <androidx.cardview.widget.CardView
+            android:id="@+id/cardCotainer"
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/_173sdp"
+            android:layout_below="@+id/uppperContainer"
+            android:layout_marginStart="@dimen/_20sdp"
+            android:layout_marginEnd="@dimen/_20sdp"
+            android:elevation="10dp"
+            app:cardCornerRadius="5dp">
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:background="#FEFEFE"
+                android:orientation="vertical">
+
+                <TextView
+                    android:id="@+id/text"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_margin="@dimen/_10sdp"
+                    android:text="Login"
+                    android:textSize="24sp"
+                    android:textStyle="bold" />
+
+                <com.google.android.material.textfield.TextInputLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="@dimen/_3sdp"
+                    android:hint="Mail Adress">
+
+                    <com.google.android.material.textfield.TextInputEditText
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginStart="@dimen/_10sdp"
+                        android:layout_marginEnd="@dimen/_10sdp" />
+
+                </com.google.android.material.textfield.TextInputLayout>
+                <!--            <com.rengwuxian.materialedittext.MaterialEditText-->
+                <!--                android:layout_width="match_parent"-->
+                <!--                android:layout_height="wrap_content"-->
+                <!--                android:hint="Password "-->
+                <!--                android:textSize="19sp"-->
+                <!--                android:inputType="textPassword"-->
+                <!--                android:layout_marginStart="10dp"-->
+                <!--                android:layout_marginEnd="10dp"-->
+
+                <!--                app:met_baseColor="@android:color/black"-->
+                <!--                app:met_floatingLabel="highlight"-->
+                <!--                android:layout_marginTop="5dp"-->
+                <!--                app:met_floatingLabelAnimating="true"-->
+                <!--                app:met_hideUnderline="true"-->
+                <!--                app:met_primaryColor="?colorAccent"-->
+                <!--                app:met_singleLineEllipsis="true" />-->
+
+                <com.google.android.material.textfield.TextInputLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="@dimen/_10sdp"
+                    android:hint="Password"
+                    app:boxStrokeColor="@color/colorPrimaryDark"
+                    app:passwordToggleEnabled="true">
+
+                    <com.google.android.material.textfield.TextInputEditText xmlns:app="http://schemas.android.com/apk/res-auto"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginStart="@dimen/_10sdp"
+
+                        android:layout_marginEnd="@dimen/_10sdp" />
+
+                </com.google.android.material.textfield.TextInputLayout>
+
+
+            </LinearLayout>
+
+
+        </androidx.cardview.widget.CardView>
+
+
+        <RelativeLayout
+            android:id="@+id/buttonContainer"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/cardCotainer"
+
+            >
+
+            <Button
+                android:layout_width="@dimen/_150sdp"
+                android:layout_height="wrap_content"
+                android:layout_alignParentEnd="true"
+                android:layout_marginTop="@dimen/_15sdp"
+                android:layout_marginEnd="@dimen/_20sdp"
+                android:layout_marginBottom="@dimen/_3sdp"
+                android:background="@drawable/button"
+                android:foreground="?attr/selectableItemBackground"
+                android:text="Sign In"
+                android:textAllCaps="true"
+
+                android:textColor="@color/white"
+                android:textSize="16sp"
+                android:textStyle="bold"
+                app:cornerRadius="5dp"
+                app:elevation="@dimen/_10sdp"
+
+                />
+
+
+        </RelativeLayout>
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_below="@+id/buttonContainer"
+            android:layout_marginTop="@dimen/_15sdp">
+
+            <RelativeLayout
+                android:id="@+id/socialContainer"
+                android:layout_width="wrap_content"
+                android:layout_height="@dimen/_14sdp"
+                android:layout_centerHorizontal="true"
+                android:orientation="horizontal">
+
+                <View
+                    android:id="@+id/right"
+                    android:layout_width="@dimen/_90sdp"
+                    android:layout_height="1.5dp"
+                    android:layout_centerVertical="true"
+                    android:background="@android:color/darker_gray" />
+
+                <TextView
+                    android:id="@+id/middle"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="@dimen/_4sdp"
+                    android:layout_marginEnd="@dimen/_4sdp"
+                    android:layout_toEndOf="@+id/right"
+                    android:text="Social Login"
+                    android:textSize="15sp" />
+
+                <View
+                    android:id="@+id/left"
+                    android:layout_width="@dimen/_90sdp"
+                    android:layout_height="1.5dp"
+                    android:layout_centerVertical="true"
+                    android:layout_toEndOf="@+id/middle"
+                    android:background="@android:color/darker_gray" />
+            </RelativeLayout>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/socialContainer"
+                android:layout_alignParentEnd="true"
+                android:layout_alignParentBottom="true"
+                android:layout_marginTop="0dp"
+                android:layout_marginEnd="0dp"
+                android:background="@drawable/landmarnks"
+                android:backgroundTint="@color/greyish"
+                android:backgroundTintMode="add"
+                android:gravity="center_vertical|center_horizontal"
+                android:orientation="vertical">
+
+                <com.google.android.gms.common.SignInButton
+                    android:layout_width="@dimen/_150sdp"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center_horizontal|center_vertical" />
+
+
+                <LinearLayout
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center_horizontal|center_vertical"
+                    android:layout_marginTop="@dimen/_10sdp"
+                    android:orientation="horizontal">
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_gravity="center_horizontal"
+                        android:gravity="center_horizontal"
+                        android:text="New  user? "
+                        android:textSize="17sp"
+                        android:textStyle="bold" />
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_gravity="center_horizontal"
+                        android:gravity="center_horizontal"
+                        android:text=" Signup"
+                        android:textColor="@android:color/holo_blue_light"
+                        android:textSize="17sp"
+                        android:textStyle="bold" />
+
+                </LinearLayout>
+
+
+            </LinearLayout>
+
+
+        </RelativeLayout>
+
+
+    </RelativeLayout>
+
+</androidx.constraintlayout.widget.ConstraintLayout>
