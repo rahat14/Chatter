@@ -9,20 +9,21 @@ import android.widget.TextView;
 import androidx.annotation.NonNull;
 import androidx.recyclerview.widget.RecyclerView;
 
+import com.google.firebase.auth.FirebaseAuth;
 import com.syntexerror.chatter.R;
 
 import java.util.List;
 
 public class chatAdapter extends RecyclerView.Adapter<chatAdapter.myHolder> {
 
-    List <TestModel> chatList ;
+    List <chatMsgModel> chatList ;
     Context context ;
     private  static  final  int MSG_TYPE_RIGHT = 1 ;
     private  static  final  int MSG_TYPE_LEFT = 0 ;
+    String uid = FirebaseAuth.getInstance().getUid();
 
 
-
-    public  chatAdapter (Context context , List <TestModel> chatList  )
+    public  chatAdapter (Context context , List <chatMsgModel> chatList  )
     {
         this.context = context ;
         this.chatList =  chatList ;
@@ -73,7 +74,7 @@ public class chatAdapter extends RecyclerView.Adapter<chatAdapter.myHolder> {
     @Override
     public int getItemViewType(int position) {
 
-        String uid = "user1" ;
+
 
        if( chatList.get(position).getUid().equals(uid))
        {

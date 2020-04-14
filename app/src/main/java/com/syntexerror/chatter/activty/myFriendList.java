@@ -5,10 +5,12 @@ import androidx.appcompat.app.AppCompatActivity;
 import androidx.recyclerview.widget.LinearLayoutManager;
 import androidx.recyclerview.widget.RecyclerView;
 
+import android.content.Intent;
 import android.os.Bundle;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
+import android.widget.Toast;
 
 import com.firebase.ui.database.FirebaseRecyclerAdapter;
 import com.firebase.ui.database.FirebaseRecyclerOptions;
@@ -19,6 +21,7 @@ import com.google.firebase.database.DatabaseReference;
 import com.google.firebase.database.FirebaseDatabase;
 import com.google.firebase.database.ValueEventListener;
 import com.syntexerror.chatter.R;
+import com.syntexerror.chatter.chatOperation.chatPage;
 import com.syntexerror.chatter.models.UserModel;
 import com.syntexerror.chatter.models.friendModel;
 import com.syntexerror.chatter.viewHolders.viewholderForAllUser;
@@ -29,6 +32,8 @@ public class myFriendList extends AppCompatActivity {
     DatabaseReference userRef  , fref ;
     FirebaseRecyclerAdapter<friendModel, viewholderForAllUser> firebaseRecyclerAdapter ;
     FirebaseRecyclerOptions<friendModel> options ;
+    String friendUserName, friendPP ;
+
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -68,17 +73,27 @@ public class myFriendList extends AppCompatActivity {
                 viewholderForAllUser.setDetails( getApplicationContext() , " ", " ");
 
                 // load user data
+                String frindShipId = getItem(i).getFriendShipID() ;
+                final String friendUserID =    getItem(i).getFriendUserID() ;
 
-             String friendUserID =    getItem(i).getFriendUserID() ;
 
-             fref.child(friendUserID).addListenerForSingleValueEvent(new ValueEventListener() {
+
+                fref.child(friendUserID).addListenerForSingleValueEvent(new ValueEventListener() {
                  @Override
                  public void onDataChange(@NonNull DataSnapshot dataSnapshot) {
 
                      UserModel model = dataSnapshot.getValue(UserModel.class);
 
+                        friendUserName = model.getUsername()   ;
+                        friendPP = model.getProfileLink() ;
+
+
+
+
+
                      viewholderForAllUser.nameTv.setText(model.getName());
                      viewholderForAllUser.setPp(model.getProfileLink(), myFriendList.this);
+
 
                  }
 
@@ -86,9 +101,7 @@ public class myFriendList extends AppCompatActivity {
                  public void onCancelled(@NonNull DatabaseError databaseError) {
 
                  }
-             });
-
-
+                });
 
 
 
@@ -96,6 +109,18 @@ public class myFriendList extends AppCompatActivity {
                 viewholderForAllUser.setOnClickListener(new viewholderForAllUser.ClickListener() {
                     @Override
                     public void onItemClick(View view, final  int position) {
+
+                        // load user data
+                        String frindShipId = getItem(position).getFriendShipID() ;
+                         String friendUserID =    getItem(position).getFriendUserID() ;
+
+                        Intent o  = new Intent(getApplicationContext() , chatPage.class );
+
+                        o.putExtra("frindShipId" , frindShipId) ;
+                        o.putExtra("friendUserID" , friendUserID) ;
+                        startActivity(o);
+
+
 
 
                     }

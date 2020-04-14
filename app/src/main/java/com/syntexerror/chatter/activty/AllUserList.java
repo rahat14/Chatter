@@ -60,7 +60,7 @@ public class AllUserList extends AppCompatActivity {
     private void loadData() {
 
 
-        Query query = userRef.orderByChild("joinTimeStamp");
+        Query query = userRef.orderByChild("TimeStamp");
 
         options = new FirebaseRecyclerOptions.Builder<UserModel>()
                 .setQuery( query , UserModel.class)

@@ -3,11 +3,13 @@
     xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
+
     android:layout_height="match_parent">
 
     <androidx.recyclerview.widget.RecyclerView
         android:layout_width="match_parent"
-        tools:listitem="@layout/row_for_friend_request"
+        tools:listitem="@layout/row_for_chat_display"
+        android:id="@+id/list"
         android:layout_height="match_parent"
         />
 </LinearLayout>

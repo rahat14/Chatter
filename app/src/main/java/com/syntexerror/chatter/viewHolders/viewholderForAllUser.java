@@ -18,7 +18,7 @@ import java.security.PublicKey;
 public class viewholderForAllUser extends RecyclerView.ViewHolder {
 
     View mView;
-    public  TextView nameTv ;
+    public  TextView nameTv, ssTv  ;
     public  ImageView pp ;
     public  LinearLayout containerLayout ;
 
@@ -56,7 +56,8 @@ public class viewholderForAllUser extends RecyclerView.ViewHolder {
            // containerLayout = itemView.findViewById(R.id.container);
             nameTv  = (TextView) mView.findViewById(R.id.nameOnFriendReq);
             pp = (ImageView) mView.findViewById(R.id.pponFriendreq);
-
+            ssTv = mView.findViewById(R.id.sstv);
+            ssTv.setVisibility(View.INVISIBLE);
 
            nameTv.setText(name);
            Glide.with(context).load(pplInk).diskCacheStrategy(DiskCacheStrategy.ALL).into(pp) ;

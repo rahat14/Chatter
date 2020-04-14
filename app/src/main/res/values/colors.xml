@@ -11,4 +11,18 @@
     <color name="white">#ffff</color>
     <color name="green">#00C853</color>
     <color name="editTextColor">#505050</color>
+
+    <color name="colorPrimaryText">#535D6B</color>
+    <color name="colorSecondaryText">#969DA6</color>
+
+    <color name="colorGreen">#29E088</color>
+    <color name="colorYellow">#FFB941</color>
+    <color name="colorRed">#FF5252</color>
+    <color name="colorDarkGreen">#00bfa5</color>
+    <color name="colorTransparent">#43000000</color>
+    <color name="colorBadge">#FF1744</color>
+
+    <color name="grey_10">#ffe6e6e6</color>
+    <color name="grey_90">#ff263238</color>
+    <color name="grey_40">#ff999999</color>
 </resources>

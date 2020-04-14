@@ -39,6 +39,7 @@
             android:text="Click to Send a  Freind Request !!"
             android:layout_marginStart="@dimen/_5sdp"
             android:textSize="17sp"
+            android:id="@+id/sstv"
             android:layout_below="@+id/nameOnFriendReq"/>
 
 
